@@ -8,4 +8,4 @@ focused on Warhammer Role-playing game 2nd edition
   * [Hibernate](https://hibernate.org) - Object-relational mapping framework
   * [Lombok](https://projectlombok.org/) - External library to cleanup the code
 * [MongoDB](https://www.mongodb.com/) - Database
-* [React.js] (https://reactjs.org/) - Frontend framework
+* [React.js](https://reactjs.org/) - Frontend framework
