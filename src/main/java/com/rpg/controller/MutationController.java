@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 @CrossOrigin
 @RequestMapping("/mutation")
 public class MutationController {
+
     @Autowired
     private MutationService mutationService;
 
@@ -22,6 +23,7 @@ public class MutationController {
     public MutationDto getOne( @PathVariable String id){
         return mutationService.readOne(id);
     }
+
     @PostMapping("/name")
     public MutationsDto getByName(@RequestBody MutationDto mutationDto){
         return mutationService.readByName(mutationDto.getName());

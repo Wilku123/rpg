@@ -14,17 +14,17 @@ public class SpellController {
     private SpellService spellService;
 
     @GetMapping("/all")
-    public SpellsDto getAll(){
+    public SpellsDto getAll() {
         return spellService.readAll();
     }
 
     @GetMapping("/{id}")
-    public SpellDto getOne(@PathVariable String id){
+    public SpellDto getOne(@PathVariable String id) {
         return spellService.readOne(id);
     }
 
     @PostMapping("/name")
-    public SpellDto getByName(@RequestBody SpellDto spellDto){
+    public SpellDto getByName(@RequestBody SpellDto spellDto) {
         return spellService.readByName(spellDto.getName());
     }
 

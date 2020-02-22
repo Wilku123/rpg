@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
-@NoArgsConstructor(access = AccessLevel.PRIVATE,force = true)
+@NoArgsConstructor(access = AccessLevel.PRIVATE, force = true)
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 @Getter
 public class ArmorDto {
@@ -20,6 +20,7 @@ public class ArmorDto {
     @NotNull
     @NotEmpty
     private String type;
+
     @NotNull
     @NotEmpty
     private String name;
@@ -34,6 +35,7 @@ public class ArmorDto {
     @NotNull
     @NotEmpty
     private String armorPoints;
+
     private String accessibility;
 
     public static ArmorDto of(final String id,
@@ -43,8 +45,8 @@ public class ArmorDto {
                               final String weight,
                               final String location,
                               final String armorPoints,
-                              final String accessibility){
-        return new ArmorDto(id,type,name,price,weight,location,armorPoints,accessibility);
+                              final String accessibility) {
+        return new ArmorDto(id, type, name, price, weight, location, armorPoints, accessibility);
     }
 
 }

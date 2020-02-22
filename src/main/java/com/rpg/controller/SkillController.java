@@ -14,15 +14,17 @@ public class SkillController {
     SkillService skillService;
 
     @GetMapping("/all")
-    public SkillsDto getAll(){
+    public SkillsDto getAll() {
         return skillService.readAll();
     }
+
     @GetMapping("/{id}")
-    public SkillDto getOne(@PathVariable String id){
+    public SkillDto getOne(@PathVariable String id) {
         return skillService.readOne(id);
     }
+
     @PostMapping("/name")
-    public SkillsDto getByName(@RequestBody SkillDto skillDto){
+    public SkillsDto getByName(@RequestBody SkillDto skillDto) {
         return skillService.readByName(skillDto.getName());
     }
 }

@@ -14,8 +14,6 @@ import javax.validation.constraints.NotNull;
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 public class EquipmentDto {
 
-    @NotNull
-    @NotEmpty
     private String id;
 
     @NotNull

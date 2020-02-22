@@ -1,6 +1,7 @@
 package com.rpg.service;
 
 
+import com.rpg.dto.util.NameDto;
 import com.rpg.repository.ArmorRepository;
 import com.rpg.dto.equipment.ArmorDto;
 import com.rpg.dto.equipment.ArmorsDto;
@@ -14,15 +15,15 @@ public class ArmorService {
     @Autowired
     private ArmorRepository armorRepository;
 
-    public ArmorsDto readAll(){
+    public ArmorsDto readAll() {
         return ArmorMapper.toDto(armorRepository.readAll());
     }
 
-    public ArmorDto readOne(String id){
+    public ArmorDto readOne(final String id){
         return ArmorMapper.toDto(armorRepository.readOne(id));
 
     }
-    public ArmorDto readByName(String name){
-        return ArmorMapper.toDto(armorRepository.readByName(name));
+    public ArmorDto readByName(final NameDto name){
+        return ArmorMapper.toDto(armorRepository.readByName(name.getName()));
     }
 }

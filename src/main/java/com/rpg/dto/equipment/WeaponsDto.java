@@ -6,6 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+import javax.xml.crypto.dsig.spec.XPathFilterParameterSpec;
 import java.util.List;
 
 @Getter
@@ -13,9 +14,9 @@ import java.util.List;
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 public class WeaponsDto {
 
-    List<WeaponDto> weaponDtos;
+    private final List<WeaponDto> weapons;
 
-    public static WeaponsDto of(final List<WeaponDto> weaponEntities){
-        return new WeaponsDto(weaponEntities);
+    public static WeaponsDto of(final List<WeaponDto> weapons){
+        return new WeaponsDto(weapons);
     }
 }

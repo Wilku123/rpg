@@ -3,11 +3,13 @@ package com.rpg.controller;
 
 import com.rpg.dto.equipment.ArmorDto;
 import com.rpg.dto.equipment.ArmorsDto;
+import com.rpg.dto.util.NameDto;
 import com.rpg.service.ArmorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@CrossOrigin
 @RequestMapping("/armor")
 public class ArmorController {
 
@@ -25,7 +27,7 @@ public class ArmorController {
     }
 
     @PostMapping("/name")
-    public ArmorDto readByName(@RequestBody ArmorDto armorDto){
-        return armorService.readByName(armorDto.getName());
+    public ArmorDto readByName(@RequestBody final NameDto name){
+        return armorService.readByName(name);
     }
 }

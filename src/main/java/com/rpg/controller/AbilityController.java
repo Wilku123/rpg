@@ -14,15 +14,17 @@ public class AbilityController {
     private AbilityService abilityService;
 
     @GetMapping("/all")
-    public AbilitiesDto getAll(){
+    public AbilitiesDto getAll() {
         return abilityService.readAll();
     }
+
     @GetMapping("/{id}")
-    public AbilityDto getOne(@PathVariable String id){
+    public AbilityDto getOne(@PathVariable String id) {
         return abilityService.readOne(id);
     }
+
     @PostMapping("/name")
-    public AbilityDto getByName(@RequestBody AbilityDto abilityDto){
+    public AbilityDto getByName(@RequestBody AbilityDto abilityDto) {
         return abilityService.readByName(abilityDto.getName());
     }
 }

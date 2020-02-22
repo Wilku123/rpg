@@ -15,16 +15,17 @@ public class WeaponTraitController {
     private WeaponTraitService weaponTraitService;
 
     @GetMapping("/all")
-    public WeaponTraitsDto getAll(){
+    public WeaponTraitsDto getAll() {
         return weaponTraitService.getAll();
     }
 
     @GetMapping("/{id}")
-    public WeaponTraitDto getOne(@PathVariable String id){
+    public WeaponTraitDto getOne(@PathVariable String id) {
         return weaponTraitService.getOne(id);
     }
+
     @PostMapping("/name")
-    public WeaponTraitDto getByName(@RequestBody WeaponTraitDto weaponTraitDto){
+    public WeaponTraitDto getByName(@RequestBody WeaponTraitDto weaponTraitDto) {
         return weaponTraitService.getByName(weaponTraitDto.getName());
     }
 }

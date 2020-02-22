@@ -14,17 +14,18 @@ public class BeastController {
     @Autowired
     private BeastService beastService;
 
-
     @GetMapping("/all")
-    public BeastsDto getAll(){
+    public BeastsDto getAll() {
         return beastService.readAll();
     }
+
     @GetMapping("/{id}")
-    public BeastDto getOne(@PathVariable String id){
+    public BeastDto getOne(@PathVariable String id) {
         return beastService.readOne(id);
     }
+
     @PostMapping("/name")
-    public BeastDto getByName(@RequestBody BeastDto beastDto){
+    public BeastDto getByName(@RequestBody BeastDto beastDto) {
         return beastService.readByName(beastDto.getName());
     }
 

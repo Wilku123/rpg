@@ -11,6 +11,7 @@ import java.util.List;
 
 @Repository
 public class ArmorRepositoryImplementation implements ArmorRepository {
+
     @Autowired
     private ArmorOrmRepository armorOrmRepository;
 
@@ -20,12 +21,12 @@ public class ArmorRepositoryImplementation implements ArmorRepository {
     }
 
     @Override
-    public ArmorEntity readOne(String id) {
+    public ArmorEntity readOne(final String id) {
         return armorOrmRepository.findById(id).orElse(null);
     }
 
     @Override
-    public ArmorEntity readByName(String name) {
+    public ArmorEntity readByName(final String name) {
         return armorOrmRepository.findByName(name);
     }
 }

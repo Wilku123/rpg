@@ -10,12 +10,12 @@ import java.util.List;
 
 @Getter
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
-@NoArgsConstructor(access = AccessLevel.PRIVATE,force = true)
+@NoArgsConstructor(access = AccessLevel.PRIVATE, force = true)
 public class ArmorsDto {
 
-    private List<ArmorDto> armorEntityList;
+    private final List<ArmorDto> armors;
 
-    public static ArmorsDto of(final List<ArmorDto> armorEntityList){
-        return new ArmorsDto(armorEntityList);
+    public static ArmorsDto of(final List<ArmorDto> armors){
+        return new ArmorsDto(armors);
     }
 }

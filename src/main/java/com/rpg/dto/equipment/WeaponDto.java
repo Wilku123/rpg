@@ -1,7 +1,6 @@
 package com.rpg.dto.equipment;
 
 
-import com.mongodb.lang.Nullable;
 import com.rpg.model.entity.WeaponTraitEntity;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
@@ -13,7 +12,7 @@ import javax.validation.constraints.NotNull;
 import java.util.List;
 
 @Getter
-@NoArgsConstructor(access = AccessLevel.PRIVATE,force = true)
+@NoArgsConstructor(access = AccessLevel.PRIVATE, force = true)
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 public class WeaponDto {
 
@@ -33,37 +32,27 @@ public class WeaponDto {
     @NotEmpty
     private String weight;
 
-    @Nullable
     private String category;
-
-    @Nullable
     private String rangeMin;
-    @Nullable
     private String rangeMax;
-
-    @Nullable
     private String reload;
-
-    @Nullable
     private String strength;
-
-    @Nullable
     private List<WeaponTraitEntity> weaponTrait;
-
-    @Nullable
     private String accessibility;
 
-    public static WeaponDto of(final String id,
-                               final String name,
-                               final String price,
-                               final String weight,
-                               final String category,
-                               final String rangeMin,
-                               final String rangeMax,
-                               final String reload,
-                               final String strength,
-                               final List<WeaponTraitEntity> weaponTrait,
-                               final String accessibility){
-        return new WeaponDto(id,name,price,weight,category,rangeMin,rangeMax,reload,strength,weaponTrait,accessibility);
+    public static WeaponDto of(
+            final String id,
+            final String name,
+            final String price,
+            final String weight,
+            final String category,
+            final String rangeMin,
+            final String rangeMax,
+            final String reload,
+            final String strength,
+            final List<WeaponTraitEntity> weaponTrait,
+            final String accessibility) {
+        return new WeaponDto(id, name, price, weight, category, rangeMin,
+                rangeMax, reload, strength, weaponTrait, accessibility);
     }
 }
