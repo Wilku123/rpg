@@ -22,7 +22,7 @@ public class AbilityController {
         return abilityService.readOne(id);
     }
     @PostMapping("/name")
-    public AbilityDto getByName(@RequestBody String name){
-        return abilityService.readByName(name);
+    public AbilityDto getByName(@RequestBody AbilityDto abilityDto){
+        return abilityService.readByName(abilityDto.getName());
     }
 }

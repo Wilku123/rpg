@@ -24,7 +24,7 @@ public class EquipmentController {
     }
 
     @PostMapping("/name")
-    public EquipmentDto getByName(@RequestBody String name){
-        return equipmentService.readByName(name);
+    public EquipmentDto getByName(@RequestBody EquipmentDto equipmentDto){
+        return equipmentService.readByName(equipmentDto.getName());
     }
 }

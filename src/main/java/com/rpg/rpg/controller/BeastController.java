@@ -24,8 +24,8 @@ public class BeastController {
         return beastService.readOne(id);
     }
     @PostMapping("/name")
-    public BeastDto getByName(@RequestBody String name){
-        return beastService.readByName(name);
+    public BeastDto getByName(@RequestBody BeastDto beastDto){
+        return beastService.readByName(beastDto.getName());
     }
 
 }

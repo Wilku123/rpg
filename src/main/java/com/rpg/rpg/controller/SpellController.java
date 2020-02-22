@@ -24,8 +24,8 @@ public class SpellController {
     }
 
     @PostMapping("/name")
-    public SpellDto getByName(@RequestBody String name){
-        return spellService.readByName(name);
+    public SpellDto getByName(@RequestBody SpellDto spellDto){
+        return spellService.readByName(spellDto.getName());
     }
 
 }

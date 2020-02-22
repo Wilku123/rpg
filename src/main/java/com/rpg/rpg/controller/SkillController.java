@@ -22,7 +22,7 @@ public class SkillController {
         return skillService.readOne(id);
     }
     @PostMapping("/name")
-    public SkillsDto getByName(@RequestBody String name){
-        return skillService.readByName(name);
+    public SkillsDto getByName(@RequestBody SkillDto skillDto){
+        return skillService.readByName(skillDto.getName());
     }
 }

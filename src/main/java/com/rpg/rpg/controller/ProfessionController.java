@@ -26,7 +26,7 @@ public class ProfessionController {
 
     }
     @PostMapping("/name")
-    public ProfessionDto getByName(@RequestBody String name){
-        return professionService.readByName(name);
+    public ProfessionDto getByName(@RequestBody ProfessionDto professionDto){
+        return professionService.readByName(professionDto.getName());
     }
 }

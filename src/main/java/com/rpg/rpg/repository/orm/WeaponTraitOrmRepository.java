@@ -9,4 +9,5 @@ import java.util.Optional;
 public interface WeaponTraitOrmRepository extends MongoRepository<WeaponTraitEntity,String> {
     List<WeaponTraitEntity> findAll();
     Optional<WeaponTraitEntity> findById(String id);
+    Optional<WeaponTraitEntity> findByName(String name);
 }

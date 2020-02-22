@@ -16,6 +16,9 @@ public class WeaponTraitService {
     public WeaponTraitDto getOne(String id){
         return WeaponTraitMapper.toDto(weaponTraitRepository.readOne(id));
     }
+    public WeaponTraitDto getByName(String name){
+        return WeaponTraitMapper.toDto(weaponTraitRepository.readByName(name));
+    }
     public WeaponTraitsDto getAll(){
         return WeaponTraitMapper.toDto(weaponTraitRepository.readAll());
     }

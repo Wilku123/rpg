@@ -14,7 +14,7 @@ import java.util.List;
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 public class WeaponsDto {
 
-    List<WeaponDto> weaponEntities;
+    List<WeaponDto> weaponDtos;
 
     public static WeaponsDto of(final List<WeaponDto> weaponEntities){
         return new WeaponsDto(weaponEntities);

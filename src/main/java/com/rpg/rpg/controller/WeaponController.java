@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@CrossOrigin
 @RequestMapping("/weapon")
 public class WeaponController {
 
@@ -25,7 +26,7 @@ public class WeaponController {
     }
 
     @PostMapping("/name")
-    public WeaponDto getByName(@RequestBody String name){
-        return weaponService.readByName(name);
+    public WeaponDto getByName(@RequestBody WeaponDto weaponDto){
+        return weaponService.readByName(weaponDto.getName());
     }
 }

@@ -8,4 +8,5 @@ import java.util.Optional;
 public interface WeaponTraitRepository {
     List<WeaponTraitEntity> readAll();
     WeaponTraitEntity readOne(String id);
+    WeaponTraitEntity readByName(String name);
 }

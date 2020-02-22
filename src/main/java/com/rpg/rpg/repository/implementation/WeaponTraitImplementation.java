@@ -23,4 +23,9 @@ public class WeaponTraitImplementation implements WeaponTraitRepository {
     public WeaponTraitEntity readOne(String id) {
         return weaponTraitOrmRepository.findById(id).orElse(null);
     }
+
+    @Override
+    public WeaponTraitEntity readByName(String name) {
+        return weaponTraitOrmRepository.findByName(name).orElse(null);
+    }
 }

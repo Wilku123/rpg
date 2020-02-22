@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@CrossOrigin
 @RequestMapping("/mutation")
 public class MutationController {
     @Autowired
@@ -22,8 +23,8 @@ public class MutationController {
         return mutationService.readOne(id);
     }
     @PostMapping("/name")
-    public MutationsDto getByName(@RequestBody String name){
-        return mutationService.readByName(name);
+    public MutationsDto getByName(@RequestBody MutationDto mutationDto){
+        return mutationService.readByName(mutationDto.getName());
     }
 
     @PostMapping("/add")

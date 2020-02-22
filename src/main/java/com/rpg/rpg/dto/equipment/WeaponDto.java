@@ -2,6 +2,7 @@ package com.rpg.rpg.dto.equipment;
 
 
 import com.mongodb.lang.Nullable;
+import com.rpg.rpg.model.entity.WeaponEntity;
 import com.rpg.rpg.model.entity.WeaponTraitEntity;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
