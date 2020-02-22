@@ -1,5 +1,6 @@
 package com.rpg.service;
 
+import com.rpg.dto.util.NameDto;
 import com.rpg.mapper.EquipmentMapper;
 import com.rpg.repository.EquipmentRepository;
 import com.rpg.dto.equipment.EquipmentDto;
@@ -17,11 +18,11 @@ public class EquipmentService {
         return EquipmentMapper.toDto(equipmentRepository.readAll());
     }
 
-    public EquipmentDto readOne(String id){
+    public EquipmentDto readOne(final String id) {
         return EquipmentMapper.toDto(equipmentRepository.readOne(id));
     }
 
-    public EquipmentDto readByName(String name){
-        return EquipmentMapper.toDto(equipmentRepository.readByName(name));
+    public EquipmentDto readByName(final NameDto name) {
+        return EquipmentMapper.toDto(equipmentRepository.readByName(name.getName()));
     }
 }

@@ -2,11 +2,13 @@ package com.rpg.controller;
 
 import com.rpg.dto.equipment.EquipmentDto;
 import com.rpg.dto.equipment.EquipmentsDto;
+import com.rpg.dto.util.NameDto;
 import com.rpg.service.EquipmentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@CrossOrigin
 @RequestMapping("/equipment")
 public class EquipmentController {
 
@@ -24,7 +26,7 @@ public class EquipmentController {
     }
 
     @PostMapping("/name")
-    public EquipmentDto getByName(@RequestBody EquipmentDto equipmentDto) {
-        return equipmentService.readByName(equipmentDto.getName());
+    public EquipmentDto getByName(@RequestBody final NameDto name) {
+        return equipmentService.readByName(name);
     }
 }

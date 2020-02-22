@@ -12,9 +12,9 @@ import java.util.List;
 @NoArgsConstructor(access = AccessLevel.PRIVATE,force = true)
 public class EquipmentsDto {
 
-    private List<EquipmentDto> equipmentDtos;
+    private List<EquipmentDto> equipments;
 
-    public static EquipmentsDto of(final List<EquipmentDto> equipmentDtos){
-        return new EquipmentsDto(equipmentDtos);
+    public static EquipmentsDto of(final List<EquipmentDto> equipments){
+        return new EquipmentsDto(equipments);
     }
 }

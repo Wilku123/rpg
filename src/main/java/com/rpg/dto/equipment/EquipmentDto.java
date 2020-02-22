@@ -8,7 +8,6 @@ import lombok.NoArgsConstructor;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
-
 @Getter
 @NoArgsConstructor(access = AccessLevel.PRIVATE,force = true)
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
@@ -32,7 +31,7 @@ public class EquipmentDto {
             final String price,
             final String weight,
             final String accessibility
-    ){
-        return new EquipmentDto(id,type,name,price,weight,accessibility);
+    ) {
+        return new EquipmentDto(id, type, name, price, weight, accessibility);
     }
 }
