@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/spell")
+@CrossOrigin
 public class SpellController {
 
     @Autowired

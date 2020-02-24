@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/ability")
+@CrossOrigin
 public class AbilityController {
 
     @Autowired
