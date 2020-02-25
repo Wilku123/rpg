@@ -1,5 +1,6 @@
 package com.rpg.dto.spell;
 
+import com.rpg.model.utility.TableForSpells;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -7,6 +8,7 @@ import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
+import java.util.List;
 
 
 @Getter
@@ -18,7 +20,7 @@ public class SpellDto {
     @NotEmpty
     private String id;
 
-    private String typeOfMagic;
+    private String type;
 
     private String domain;
 
@@ -38,19 +40,22 @@ public class SpellDto {
     @NotEmpty
     private String description;
 
+    private List<TableForSpells> table;
+
 
     public static SpellDto of(
             final String id,
-            final String typeOfMagic,
+            final String type,
             final String domain,
             final String name,
             final String reqPower,
             final String castingTime,
             final String ingredient,
             final String duration,
-            final String description
+            final String description,
+            final List<TableForSpells> table
     ){
-        return new SpellDto(id,typeOfMagic,domain,name,reqPower,castingTime,ingredient,duration,description);
+        return new SpellDto(id,type,domain,name,reqPower,castingTime,ingredient,duration,description,table);
     }
 
 }
