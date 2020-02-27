@@ -25,12 +25,12 @@ public class BeastEntity {
     private String img;
     private MainTraits mainTraits;
     private SecondaryTraits secondaryTraits;
-    private List<SkillEntity> skillList;
-    private List<AbilityEntity> abilityList;
+    private List<String> skillList;
+    private List<String> abilityList;
     private List<SpecialRule> specialRules;
-    private List<ArmorEntity> armorList;
+    private List<String> armorList;
     private ArmorPoints armorPoints;
-    private WeaponEntity weapon;
+    private List<String> weapon;
     private String difficulty;
 
 }

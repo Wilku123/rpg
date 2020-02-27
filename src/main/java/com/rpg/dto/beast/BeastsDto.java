@@ -12,7 +12,7 @@ import java.util.List;
 @Getter
 public class BeastsDto {
 
-    private List<BeastDto> beastDtoList;
+    private List<BeastDto> beastDtos;
 
     public static BeastsDto of(List<BeastDto> beastsDtos){
         return new BeastsDto(beastsDtos);

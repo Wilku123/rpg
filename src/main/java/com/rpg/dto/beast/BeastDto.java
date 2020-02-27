@@ -44,10 +44,10 @@ public class BeastDto {
     @NotNull
     @NotEmpty
     private SecondaryTraits secondaryTraits;
-    private List<SkillEntity> skillList;
-    private List<AbilityEntity> abilityList;
+    private List<String> skillList;
+    private List<String> abilityList;
     private List<SpecialRule> specialRules;
-    private List<ArmorEntity> armorList;
+    private List<String> armorList;
 
     @NotNull
     @NotEmpty
@@ -55,7 +55,7 @@ public class BeastDto {
 
     @NotNull
     @NotEmpty
-    private WeaponEntity weapon;
+    private List<String> weapon;
 
     @NotNull
     @NotEmpty
@@ -68,12 +68,12 @@ public class BeastDto {
             final String img,
             final MainTraits mainTraits,
             final SecondaryTraits secondaryTraits,
-            final List<SkillEntity> skillEntities,
-            final List<AbilityEntity> abilityEntities,
+            final List<String> skillEntities,
+            final List<String> abilityEntities,
             final List<SpecialRule> specialRules,
-            final List<ArmorEntity> armorEntities,
+            final List<String> armorEntities,
             final ArmorPoints armorPoints,
-            final WeaponEntity weaponEntity,
+            final List<String> weaponEntity,
             final String difficulty) {
         return new BeastDto(
                 id, name, description, img, mainTraits, secondaryTraits, skillEntities, abilityEntities,

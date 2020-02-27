@@ -37,13 +37,13 @@ public class ProfessionDto {
     @NotNull
     @NotEmpty
     private SecondaryTraits secondaryTraits;
-    private List<SkillEntity> skillList;
-    private List<AbilityEntity> abilityList;
-    private List<WeaponEntity> weaponList;
-    private List<ArmorEntity> armorList;
-    private List<EquipmentEntity> equipmentList;
-    private List<ProfessionEntity> inputProf;
-    private List<ProfessionEntity> outputProf;
+    private List<String> skillList;
+    private List<String> abilityList;
+    private List<String> weaponList;
+    private List<String> armorList;
+    private List<String> equipmentList;
+    private List<String> inputProf;
+    private List<String> outputProf;
 
     public static ProfessionDto of(
             final String id,
@@ -51,13 +51,13 @@ public class ProfessionDto {
             final String description,
             final MainTraits mainTraits,
             final SecondaryTraits secondaryTraits,
-            final List<SkillEntity> skillEntities,
-            final List<AbilityEntity> abilityList,
-            final List<WeaponEntity> weaponList,
-            final List<ArmorEntity> armorList,
-            final List<EquipmentEntity> equipmentList,
-            final List<ProfessionEntity> inputProf,
-            final List<ProfessionEntity> outputProf
+            final List<String> skillEntities,
+            final List<String> abilityList,
+            final List<String> weaponList,
+            final List<String> armorList,
+            final List<String> equipmentList,
+            final List<String> inputProf,
+            final List<String> outputProf
     ) {
         return new ProfessionDto(
                 id, name, description, mainTraits, secondaryTraits,

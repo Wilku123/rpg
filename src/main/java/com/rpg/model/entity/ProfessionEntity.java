@@ -21,13 +21,13 @@ public class ProfessionEntity {
     private String description;
     private MainTraits mainTraits;
     private SecondaryTraits secondaryTraits;
-    private List<SkillEntity> skillList;
-    private List<AbilityEntity> abilityList;
-    private List<WeaponEntity> weaponList;
-    private List<ArmorEntity> armorList;
-    private List<EquipmentEntity> equipmentList;
-    private List<ProfessionEntity> inputProf;
-    private List<ProfessionEntity> outputProf;
+    private List<String> skillList;
+    private List<String> abilityList;
+    private List<String> weaponList;
+    private List<String> armorList;
+    private List<String> equipmentList;
+    private List<String> inputProf;
+    private List<String> outputProf;
 
 
 }
