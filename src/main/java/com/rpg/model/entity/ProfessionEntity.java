@@ -28,6 +28,8 @@ public class ProfessionEntity {
     private List<String> equipmentList;
     private List<String> inputProf;
     private List<String> outputProf;
+    private String img;
+    private String comment;
 
 
 }

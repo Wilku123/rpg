@@ -17,7 +17,7 @@ public class ProfessionsDto {
 
     @NotNull
     @NotEmpty
-    private List<ProfessionDto> professionDtoList;
+    private List<ProfessionDto> professionDto;
 
     public static ProfessionsDto of(
             final List<ProfessionDto> professionDtos

@@ -22,7 +22,9 @@ public class ProfessionMapper {
                 prof.getArmorList(),
                 prof.getEquipmentList(),
                 prof.getInputProf(),
-                prof.getOutputProf()
+                prof.getOutputProf(),
+                prof.getImg(),
+                prof.getComment()
         )).collect(Collectors.toList()));
     }
 
@@ -38,7 +40,11 @@ public class ProfessionMapper {
                 professionEntity.getArmorList(),
                 professionEntity.getEquipmentList(),
                 professionEntity.getInputProf(),
-                professionEntity.getOutputProf());
+                professionEntity.getOutputProf(),
+                professionEntity.getImg(),
+                professionEntity.getComment()
+
+        );
     }
     public static ProfessionEntity fromDto(ProfessionDto professionDto){
 
@@ -53,6 +59,8 @@ public class ProfessionMapper {
                 professionDto.getArmorList(),
                 professionDto.getEquipmentList(),
                 professionDto.getInputProf(),
-                professionDto.getOutputProf());
+                professionDto.getOutputProf(),
+                professionDto.getName(),
+                professionDto.getComment());
     }
 }

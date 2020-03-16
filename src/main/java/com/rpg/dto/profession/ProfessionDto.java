@@ -44,6 +44,8 @@ public class ProfessionDto {
     private List<String> equipmentList;
     private List<String> inputProf;
     private List<String> outputProf;
+    private String img;
+    private String comment;
 
     public static ProfessionDto of(
             final String id,
@@ -57,11 +59,13 @@ public class ProfessionDto {
             final List<String> armorList,
             final List<String> equipmentList,
             final List<String> inputProf,
-            final List<String> outputProf
+            final List<String> outputProf,
+            final String img,
+            final String comment
     ) {
         return new ProfessionDto(
                 id, name, description, mainTraits, secondaryTraits,
                 skillEntities, abilityList, weaponList, armorList,
-                equipmentList, inputProf, outputProf);
+                equipmentList, inputProf, outputProf,img, comment);
     }
 }
