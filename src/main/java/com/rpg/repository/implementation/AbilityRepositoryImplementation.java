@@ -21,12 +21,12 @@ public class AbilityRepositoryImplementation implements AbilityRepository {
     }
 
     @Override
-    public Optional<AbilityEntity> readOne(String id) {
-        return abilityOrmRepository.findById(id);
+    public AbilityEntity readOne(String id) {
+        return abilityOrmRepository.findById(id).orElse(null);
     }
 
     @Override
     public AbilityEntity readByName(String name) {
-        return abilityOrmRepository.findByName(name);
+        return abilityOrmRepository.findByNameRegex(name).orElse(null);
     }
 }

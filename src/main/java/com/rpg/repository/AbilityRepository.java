@@ -7,7 +7,7 @@ import java.util.Optional;
 
 public interface AbilityRepository {
     List<AbilityEntity> readAll();
-    Optional<AbilityEntity> readOne(String id);
+    AbilityEntity readOne(String id);
     AbilityEntity readByName(String name);
 
 }
