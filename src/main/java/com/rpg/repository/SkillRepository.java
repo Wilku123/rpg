@@ -6,6 +6,6 @@ import java.util.List;
 
 public interface SkillRepository {
     List<SkillEntity> readAll();
-    List<SkillEntity> readByName(String name);
+    SkillEntity readByName(String name);
     SkillEntity readOne(String id);
 }

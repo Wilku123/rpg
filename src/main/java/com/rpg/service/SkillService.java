@@ -19,7 +19,7 @@ public class SkillService {
     public SkillDto readOne(String id){
         return SkillMapper.toDto(skillRepository.readOne(id));
     }
-    public SkillsDto readByName(String name){
+    public SkillDto readByName(String name){
         return SkillMapper.toDto(skillRepository.readByName(name));
     }
 }

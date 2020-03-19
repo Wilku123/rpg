@@ -20,8 +20,8 @@ public class SkillRepositoryImplementation implements SkillRepository {
     }
 
     @Override
-    public List<SkillEntity> readByName(String name) {
-        return skillOrmRepository.findByName(name);
+    public SkillEntity readByName(String name) {
+        return skillOrmRepository.findByName(name).orElse(null);
     }
 
     @Override
