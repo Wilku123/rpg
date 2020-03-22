@@ -19,10 +19,10 @@ public class AbilityService {
         return AbilityMapper.toDto(abilityRepository.readAll());
     }
     public AbilityDto readOne(String id){
-        return AbilityMapper.toDto(Objects.requireNonNull(abilityRepository.readOne(id)));
+        return AbilityMapper.toDto((abilityRepository.readOne(id)));
     }
     public AbilityDto readByName(String name){
-        return AbilityMapper.toDto(Objects.requireNonNull(abilityRepository.readByName(name)));
+        return AbilityMapper.toDto((abilityRepository.readByName(name)));
     }
 
 

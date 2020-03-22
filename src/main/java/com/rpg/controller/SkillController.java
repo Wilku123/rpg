@@ -6,7 +6,7 @@ import com.rpg.service.SkillService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-@RequestMapping("/skill")
+@RequestMapping("/book/skill")
 @RestController
 @CrossOrigin
 public class SkillController {

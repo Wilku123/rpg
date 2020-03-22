@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/spell")
+@RequestMapping("/book/spell")
 @CrossOrigin
 public class SpellController {
 

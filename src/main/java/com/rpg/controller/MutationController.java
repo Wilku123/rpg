@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @CrossOrigin
-@RequestMapping("/mutation")
+@RequestMapping("/book/mutation")
 public class MutationController {
 
     @Autowired

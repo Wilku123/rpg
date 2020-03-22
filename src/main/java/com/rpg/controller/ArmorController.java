@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @CrossOrigin
-@RequestMapping("/armor")
+@RequestMapping("/book/armor")
 public class ArmorController {
 
     @Autowired
