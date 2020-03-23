@@ -13,7 +13,7 @@ import javax.validation.constraints.NotNull;
 public class UserDto {
     @NotNull
     @NotEmpty
-    private Long id;
+    private String id;
 
     @NotNull
     @NotEmpty
@@ -31,7 +31,7 @@ public class UserDto {
     @NotEmpty
     private final String email;
 
-    public static UserDto of(final Long id, final String username,final String role, final String password, final String email) {
+    public static UserDto of(final String id, final String username,final String role, final String password, final String email) {
         return new UserDto(id, username,role, password,email);
     }
 }

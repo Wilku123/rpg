@@ -13,9 +13,7 @@ import javax.validation.constraints.NotNull;
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 @NoArgsConstructor(force = true)
 public class UserLoginDto {
-    @NotNull
-    @NotEmpty
-    private Long id;
+
 
     @NotNull
     @NotEmpty
@@ -27,7 +25,7 @@ public class UserLoginDto {
 
 
 
-    public static UserLoginDto of(final Long id, final String password, final String email) {
-        return new UserLoginDto(id, email,password);
+    public static UserLoginDto of( final String email,final String password) {
+        return new UserLoginDto(email,password);
     }
 }
