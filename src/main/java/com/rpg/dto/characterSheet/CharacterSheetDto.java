@@ -29,6 +29,7 @@ public class CharacterSheetDto {
     private List<HeroEquipment> equipment;
     private HeroMoney money;
     private List<HeroSpell> spell;
+    private List<HeroMutation> mutations;
     private String owner;
 
     public static CharacterSheetDto of(
@@ -47,9 +48,10 @@ public class CharacterSheetDto {
             final List<HeroEquipment> equipment,
             final HeroMoney money,
             final List<HeroSpell> spell,
+            final List<HeroMutation> mutations,
             final String owner) {
         return new CharacterSheetDto(
-                id, hero, description, traits, weapon, armor, player, experiencePoints, movement, armorPoints, skill, ability, equipment, money, spell, owner);
+                id, hero, description, traits, weapon, armor, player, experiencePoints, movement, armorPoints, skill, ability, equipment, money, spell,mutations, owner);
     }
 
 }

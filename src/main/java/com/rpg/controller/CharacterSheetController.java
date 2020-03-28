@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @CrossOrigin
-@RequestMapping("/user/characterSheet")
+@RequestMapping("/user/sheet")
 public class CharacterSheetController {
 
     @Autowired
@@ -21,6 +21,10 @@ public class CharacterSheetController {
     @PostMapping("/owner")
     public CharacterSheetDto getByOwner(@RequestBody CharacterSheetDto characterSheetDto){
         return characterSheetService.readByOwner(characterSheetDto.getOwner());
+    }
+    @PostMapping("/exist")
+    public boolean getExist(@RequestBody CharacterSheetDto characterSheetDto){
+        return characterSheetService.exist(characterSheetDto.getOwner());
     }
 
 

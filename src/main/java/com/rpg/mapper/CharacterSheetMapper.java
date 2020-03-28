@@ -25,7 +25,8 @@ public class CharacterSheetMapper {
                 sheetEntity.getAbility(),
                 sheetEntity.getEquipment(),
                 sheetEntity.getMoney(),
-                sheetEntity.getSpell(), 
+                sheetEntity.getSpell(),
+                sheetEntity.getMutations(),
                 sheetEntity.getOwner());
 
     }
@@ -46,6 +47,7 @@ public class CharacterSheetMapper {
                 cs.getEquipment(),
                 cs.getMoney(),
                 cs.getSpell(),
+                cs.getMutations(),
                 cs.getOwner())).collect(Collectors.toList()));
     }
     public static CharacterSheetEntity fromDto(CharacterSheetDto dto){
@@ -64,6 +66,7 @@ public class CharacterSheetMapper {
                 dto.getEquipment(),
                 dto.getMoney(),
                 dto.getSpell(),
+                dto.getMutations(),
                 dto.getOwner());
     }
 }

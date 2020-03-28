@@ -31,6 +31,7 @@ public class CharacterSheetEntity {
     private List<HeroEquipment> equipment;
     private HeroMoney money;
     private List<HeroSpell> spell;
+    private List<HeroMutation> mutations;
     private String owner;
 
 }

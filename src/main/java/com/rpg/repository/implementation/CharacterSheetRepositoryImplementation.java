@@ -23,4 +23,9 @@ public class CharacterSheetRepositoryImplementation  implements CharacterSheetRe
     public List<CharacterSheetEntity> readAll() {
         return characterSheetOrmRepository.findAll();
     }
+
+    @Override
+    public boolean exist(String id) {
+        return characterSheetOrmRepository.existsByOwner(id);
+    }
 }

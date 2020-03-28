@@ -7,6 +7,7 @@ import java.util.List;
 public interface CharacterSheetRepository {
     CharacterSheetEntity readByOwner(String owner);
     List<CharacterSheetEntity> readAll();
+    boolean exist(String id);
 
 
 }
