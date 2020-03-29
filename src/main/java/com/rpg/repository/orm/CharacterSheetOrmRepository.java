@@ -6,7 +6,7 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 import java.util.List;
 
 public interface CharacterSheetOrmRepository extends MongoRepository<CharacterSheetEntity,String> {
-    CharacterSheetEntity findByOwner(String owner);
+    List<CharacterSheetEntity> findAllByOwner(String owner);
     List<CharacterSheetEntity> findAll();
     boolean existsByOwner(String id);
 }

@@ -4,6 +4,7 @@ import com.rpg.dto.characterSheet.CharacterSheetDto;
 import com.rpg.dto.characterSheet.CharacterSheetsDto;
 import com.rpg.service.CharacterSheetService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -18,14 +19,13 @@ public class CharacterSheetController {
     public CharacterSheetsDto getAll(){
         return characterSheetService.readAll();
     }
-    @PostMapping("/owner")
-    public CharacterSheetDto getByOwner(@RequestBody CharacterSheetDto characterSheetDto){
-        return characterSheetService.readByOwner(characterSheetDto.getOwner());
+    @GetMapping("/owner")
+    public CharacterSheetsDto getByOwner(Authentication authentication){
+        return characterSheetService.readByOwner(authentication.getName());
     }
     @PostMapping("/exist")
     public boolean getExist(@RequestBody CharacterSheetDto characterSheetDto){
         return characterSheetService.exist(characterSheetDto.getOwner());
     }
-
 
 }

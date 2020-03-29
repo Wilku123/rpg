@@ -27,7 +27,7 @@ public class ArmorController {
     }
 
     @PostMapping("/name")
-    public ArmorDto readByName(@RequestBody final NameDto name){
-        return armorService.readByName(name);
+    public ArmorDto readByName(@RequestBody final ArmorDto armor){
+        return armorService.readByNameAndType(armor.getName(),armor.getType());
     }
 }

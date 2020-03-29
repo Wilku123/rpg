@@ -26,7 +26,7 @@ public class ArmorRepositoryImplementation implements ArmorRepository {
     }
 
     @Override
-    public ArmorEntity readByName(final String name) {
-        return armorOrmRepository.findByName(name);
+    public ArmorEntity readByNameAndType(final String name,final String type) {
+        return armorOrmRepository.findByNameAndType(name,type);
     }
 }

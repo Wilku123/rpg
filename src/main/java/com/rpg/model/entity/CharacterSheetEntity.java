@@ -21,7 +21,7 @@ public class CharacterSheetEntity {
     private HeroDescription description;
     private HeroTraits traits;
     private List<String> weapon;
-    private List<String> armor;
+    private List<HeroArmor> armor;
     private PlayerInfo player;
     private ExperiencePoints experiencePoints;
     private HeroMovement movement;

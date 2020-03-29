@@ -15,8 +15,8 @@ public class CharacterSheetRepositoryImplementation  implements CharacterSheetRe
     private CharacterSheetOrmRepository characterSheetOrmRepository;
 
     @Override
-    public CharacterSheetEntity readByOwner(String owner) {
-        return characterSheetOrmRepository.findByOwner(owner);
+    public List<CharacterSheetEntity> readByOwner(String owner) {
+        return characterSheetOrmRepository.findAllByOwner(owner);
     }
 
     @Override

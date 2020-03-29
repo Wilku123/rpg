@@ -9,5 +9,5 @@ import java.util.Optional;
 public interface ArmorOrmRepository extends MongoRepository<ArmorEntity,String> {
     List<ArmorEntity> findAll();
     Optional<ArmorEntity> findById(String id);
-    ArmorEntity findByName(String name);
+    ArmorEntity findByNameAndType(String name,String type);
 }

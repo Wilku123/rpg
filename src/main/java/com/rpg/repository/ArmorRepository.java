@@ -7,6 +7,6 @@ import java.util.List;
 public interface ArmorRepository {
     List<ArmorEntity> readAll();
     ArmorEntity readOne(String id);
-    ArmorEntity readByName(String name);
+    ArmorEntity readByNameAndType(String name,String type);
 
 }

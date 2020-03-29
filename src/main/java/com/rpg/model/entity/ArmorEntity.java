@@ -5,6 +5,8 @@ import lombok.Getter;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.List;
+
 @AllArgsConstructor
 @Getter
 @Document("armor")
@@ -17,7 +19,7 @@ public class ArmorEntity {
     private String name;
     private String price;
     private String weight;
-    private String location;
+    private List<String> location;
     private String armorPoints;
     private String accessibility;
 }

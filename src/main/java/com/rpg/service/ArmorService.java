@@ -2,6 +2,7 @@ package com.rpg.service;
 
 
 import com.rpg.dto.util.NameDto;
+import com.rpg.model.entity.ArmorEntity;
 import com.rpg.repository.ArmorRepository;
 import com.rpg.dto.equipment.ArmorDto;
 import com.rpg.dto.equipment.ArmorsDto;
@@ -23,7 +24,7 @@ public class ArmorService {
         return ArmorMapper.toDto(armorRepository.readOne(id));
 
     }
-    public ArmorDto readByName(final NameDto name){
-        return ArmorMapper.toDto(armorRepository.readByName(name.getName()));
+    public ArmorDto readByNameAndType(final String name, final String type){
+        return ArmorMapper.toDto(armorRepository.readByNameAndType(name,type));
     }
 }
