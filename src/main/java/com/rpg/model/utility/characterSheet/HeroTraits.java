@@ -10,5 +10,10 @@ import lombok.Setter;
 public class HeroTraits {
     private MainTraits mainTraits;
     private SecondaryTraits secondaryTraits;
+    private MainTraits professionMainTraits;
+    private SecondaryTraits professionSecondaryTraits;
+    private MainTraits currentCharacterMainTraits;
+    private SecondaryTraits currentCharacterSecondaryTraits;
+    private boolean everythingDone;
 
 }

@@ -1,13 +1,16 @@
 package com.rpg.service;
 
+import com.rpg.dto.characterSheet.CharacterSheetDto;
 import com.rpg.dto.characterSheet.CharacterSheetsDto;
 import com.rpg.mapper.CharacterSheetMapper;
+import com.rpg.model.utility.MainTraits;
+import com.rpg.model.utility.SecondaryTraits;
 import com.rpg.repository.CharacterSheetRepository;
 import com.rpg.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Service;
+
 
 @Service
 public class CharacterSheetService {
@@ -28,5 +31,8 @@ public class CharacterSheetService {
     }
     public boolean exist(final String id){
         return characterSheetRepository.exist(id);
+    }
+    public CharacterSheetDto add(CharacterSheetDto characterSheetDto){
+        return CharacterSheetMapper.toDto(characterSheetRepository.add(CharacterSheetMapper.fromDto(characterSheetDto)));
     }
 }

@@ -28,4 +28,9 @@ public class CharacterSheetRepositoryImplementation  implements CharacterSheetRe
     public boolean exist(String id) {
         return characterSheetOrmRepository.existsByOwner(id);
     }
+
+    @Override
+    public CharacterSheetEntity add(CharacterSheetEntity characterSheetEntity) {
+        return characterSheetOrmRepository.save(characterSheetEntity);
+    }
 }

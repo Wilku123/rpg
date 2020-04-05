@@ -9,4 +9,5 @@ public interface CharacterSheetOrmRepository extends MongoRepository<CharacterSh
     List<CharacterSheetEntity> findAllByOwner(String owner);
     List<CharacterSheetEntity> findAll();
     boolean existsByOwner(String id);
+    CharacterSheetEntity insert(CharacterSheetEntity characterSheetEntity);
 }

@@ -27,5 +27,8 @@ public class CharacterSheetController {
     public boolean getExist(@RequestBody CharacterSheetDto characterSheetDto){
         return characterSheetService.exist(characterSheetDto.getOwner());
     }
-
+    @PostMapping("/add")
+    public CharacterSheetDto add(@RequestBody CharacterSheetDto characterSheetDto){
+        return characterSheetService.add(characterSheetDto);
+    }
 }
